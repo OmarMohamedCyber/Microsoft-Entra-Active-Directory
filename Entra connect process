@@ -1,0 +1,89 @@
+MICROSOFT ENTRA CONNECT INSTALLATION & CONFIGURATION GUIDE
+
+PURPOSE
+Microsoft Entra Connect (formerly Azure AD Connect) synchronizes on-premises Active Directory users, groups, and contacts with Microsoft Entra ID, allowing users to access Microsoft 365 and other cloud resources using their existing AD credentials.
+
+=====================================================================
+PREREQUISITES
+=====================================================================
+
+ACTIVE DIRECTORY REQUIREMENTS
+- Active Directory Domain Services (AD DS) installed and operational
+- Forest Functional Level: Windows Server 2003 or higher
+- Writable Domain Controller available
+- User Principal Names (UPNs) match a verified Microsoft 365 domain
+
+SERVER REQUIREMENTS
+- Windows Server 2016, 2019, or 2022
+- Domain-joined server
+- Full GUI installation (Server Core not supported)
+- Minimum 6 GB RAM recommended
+- TLS 1.2 enabled
+
+ACCOUNT REQUIREMENTS
+- Enterprise Administrator account (Active Directory)
+- Global Administrator account (Microsoft Entra ID)
+
+=====================================================================
+DOWNLOAD MICROSOFT ENTRA CONNECT
+=====================================================================
+
+1. Open:
+   https://entra.microsoft.com
+
+2. Navigate to:
+   Microsoft Entra ID
+     → Microsoft Entra Connect
+     → Connect Sync
+
+3. Click:
+   Download the latest Entra Connect Sync Version
+
+4. Download:
+   AzureADConnect.msi
+
+=====================================================================
+INSTALLATION PROCEDURE
+=====================================================================
+
+STEP 1 - LAUNCH INSTALLER
+
+Run:
+AzureADConnect.msi
+
+Accept the license agreement and click Continue.
+
+---------------------------------------------------------------------
+
+STEP 2 - CHOOSE INSTALLATION TYPE
+
+OPTION A - EXPRESS SETTINGS (RECOMMENDED)
+
+Use when:
+- Single Active Directory Forest
+- Standard synchronization deployment
+- Password Hash Synchronization
+
+OPTION B - CUSTOMIZE
+
+Use when:
+- Multiple forests
+- Pass-Through Authentication
+- AD FS Federation
+- OU filtering requirements
+
+---------------------------------------------------------------------
+
+STEP 3 - CONNECT TO MICROSOFT ENTRA ID
+
+Enter:
+Global Administrator credentials
+
+Example:
+admin@company.com
+
+Click Next.
+
+---------------------------------------------------------------------
+
+STEP 4 - CONNECT TO ACTIVE
